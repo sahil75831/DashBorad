@@ -1,0 +1,25 @@
+.wrapper{
+    height: fit-content;
+    width: calc(100vw - 17rem);
+    padding: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    z-index: 99;
+    .container{ 
+        .bar{
+           display: flex; 
+           flex-direction: row;
+           align-items: flex-start;
+           gap: 1.2rem;
+           .first{
+            flex: 1;
+           }
+           .second{
+            display: flex; 
+           flex-direction: row;
+           align-items: flex-start;
+           gap: 1.2rem;
+           }
+        }
+    }
+}

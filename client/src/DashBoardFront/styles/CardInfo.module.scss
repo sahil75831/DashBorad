@@ -1,0 +1,44 @@
+.wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px black;
+  font-size: 1.2rem;
+  .container {
+    // background-color: aqua;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    .first {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      flex: 1;
+      gap: 0.5rem;
+    //   background-color: red;
+      width: 7rem;
+      .textOne,
+      .textTwo {
+        text-transform: capitalize;
+      }
+    }
+    .second {
+    //   background-color: aqua;
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      gap: 0.5rem;
+      width: 5rem;
+      .secondOne,
+      .secondTwo {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
