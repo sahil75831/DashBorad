@@ -6,7 +6,7 @@ import css from "../styles/ChartCard.module.scss";
 import { darkColor, lightColor } from "../Constants";
 const ChartCard = ({type, width, height, primaryText,secondaryText}) => {
     const { themeColor, setThemeColor,displayComp, setDisplayComp } = useContext(ThemeContext);
-    console.log(">>> ",displayComp)
+   
     const data = {
         labels:["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         datasets:[

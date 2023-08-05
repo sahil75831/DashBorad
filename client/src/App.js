@@ -10,12 +10,11 @@ import ChartCard from "./DashBoardFront/components/ChartCard";
 import NavBar from "./DashBoardFront/components/NavBar";
 import css from "./App.module.scss";
 import TeamList from "./DashBoardFront/components/ManageTeam/TeamList";
+import Event from "./DashBoardFront/components/events/Event";
 const App = () => {
   const { themeColor, setThemeColor,displayComp, setDisplayComp } = useContext(ThemeContext)
-  {console.log("disp222222layComp ---",displayComp) } 
-  console.log("sjnjsnsjjsnjsnsn")
-  return (
-    // <ThemeContextProvider>
+    return (
+    
     <>
       <div className={`${css.wrapper}`}>
         <div
@@ -115,6 +114,7 @@ const App = () => {
       </div>
 
       <TeamList />
+      <Event />
       </>
     // </ThemeContextProvider>
   );
