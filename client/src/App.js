@@ -39,17 +39,50 @@ const App = () => {
               {/* change components here */}
               <div className={`${css.out}`} style={{border:"2px solid yellow"}}>
 
-             <div style={{display:displayComp==="BAR"?true:"none", transition:"all 5s"}}>HELLO
-             {console.log(displayComp) }
-             {displayComp==="BAR"?"yes":"no"}
+             <div style={{display:displayComp==="BAR"?true:"none"}}>
+
              <ChartCard
                   type={"Bar"}
-                  width={"480px"}
-                  height={"300px"}
+                  width={"900px"}
+                  height={"700px"}
                   primaryText={"Revenue Generated"}
                   secondaryText={"$32,152.00"}
                 />
              </div>
+             <div style={{display:displayComp==="LINE"?true:"none"}}>
+
+             <ChartCard
+                  type={"Line"}
+                  width={"900px"}
+                  height={"700px"}
+                  primaryText={"Revenue Generated"}
+                  secondaryText={"$32,152.00"}
+                />
+             </div>
+             <div style={{display:displayComp==="PIE"?true:"none"}}>
+
+             <ChartCard
+                  type={"Pie"}
+                  width={"800px"}
+                  height={"600px"}
+                  primaryText={"Revenue Generated"}
+                  secondaryText={"$32,152.00"}
+                />
+             </div>
+             <div style={{display:displayComp==="WORLD"?true:"none"}}>
+
+             <ChartCard
+                  type={"World"}
+                  width={"800px"}
+                  height={"600px"}
+                  primaryText={"Revenue Generated"}
+                  secondaryText={"$32,152.00"}
+                />
+             </div>
+
+
+
+
               <div className={`${css.divTwoContainerCards}`}>
                 <CardInfo cardOne={{ textOne: 12361, textTwo: "email sent" }} />
                 <CardInfo cardOne={{ textOne: 12361, textTwo: "email sent" }} />
@@ -57,7 +90,7 @@ const App = () => {
                 <CardInfo cardOne={{ textOne: 12361, textTwo: "email sent" }} />
               </div>
 
-              <div className={`${css.divTwoContainerCharts}`}>
+              <div className={`${css.divTwoContainerCharts}`} style={{display:displayComp==="BAR"?"none":"true"}}>
               <ChartCard
                   type={"Line"}
                   width={"480px"}

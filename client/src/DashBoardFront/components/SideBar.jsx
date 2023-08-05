@@ -93,19 +93,19 @@ const SideBar = () => {
           </div>
           <div>Bar</div>
         </div>
-        <div className={`${css.third}`}>
+        <div className={`${css.third}`} onClick={()=>setDisplayComp("PIE")} style={{cursor:"pointer"}}>
           <div>
             <AiFillPieChart />
           </div>
           <div>pie</div>
         </div>
-        <div className={`${css.third}`}>
+        <div className={`${css.third}`} onClick={()=>setDisplayComp("LINE")} style={{cursor:"pointer"}}>
           <div>
             <AiOutlineLineChart />
           </div>
           <div>line</div>
         </div>
-        <div className={`${css.third}`}>
+        <div className={`${css.third}`} onClick={()=>setDisplayComp("WORLD")} style={{cursor:"pointer"}}>
           <div>
             <GiWorld />
           </div>
