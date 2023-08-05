@@ -12,8 +12,13 @@ import { FaFileInvoiceDollar } from "react-icons/fa";
 import { GiWorld } from "react-icons/gi";
 import css from "../styles/SideBar.module.scss";
 import { darkColor, lightColor } from "../Constants";
+import Charts from "./Charts";
+import ChartCard from "./ChartCard";
 const SideBar = () => {
-  const { themeColor, setThemeColor } = useContext(ThemeContext);
+  const { themeColor, setThemeColor, displayComp, setDisplayComp } = useContext(ThemeContext);
+  // const {} = useContext(ThemeContext)
+    console.log("dispaly compsidebar ",displayComp )
+
   return (
     <div
       className={`${css.wrapper}`}
@@ -35,7 +40,7 @@ const SideBar = () => {
           <div>Sahil</div>
           <div>03-08-2023</div>
         </div>
-        <div style={{fontSize:"0.9rem",letterSpacing:"3px",fontWeight:"600" ,color: `${themeColor === "light" ? "darkslateblue" : "orange"}`,}}>DATA</div>
+        <div style={{fontSize:"0.9rem",letterSpacing:"3px",fontWeight:"600" ,color: `${themeColor === "light" ? "darkslateblue" : "orange"}`}}>DATA</div>
         <div className={`${css.third}`}>
           <div>
             <AiOutlineHome />
@@ -80,13 +85,14 @@ const SideBar = () => {
           </div>
           <div>FAQs Page</div>
         </div>
-        <div className={`${css.third}`}>
+        <div style={{fontSize:"0.9rem",letterSpacing:"3px",fontWeight:"600" ,color: `${themeColor === "light" ? "darkslateblue" : "orange"}`,}}>CHARTS</div>
+        
+        <div className={`${css.third}`} onClick={()=>setDisplayComp("BAR")} style={{cursor:"pointer"}}>
           <div>
             <BsFillBarChartFill />
           </div>
           <div>Bar</div>
         </div>
-        <div style={{fontSize:"0.9rem",letterSpacing:"3px",fontWeight:"600" ,color: `${themeColor === "light" ? "darkslateblue" : "orange"}`,}}>CHARTS</div>
         <div className={`${css.third}`}>
           <div>
             <AiFillPieChart />

@@ -19,6 +19,13 @@
         .divTwoContainerNavbar {
         //   background-color: aqua;
         }
+        .out{
+          border-radius: 10px ;
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          overflow: hidden;
+          
         .divTwoContainerCards {
           display: flex;
           flex-direction: row;
@@ -33,6 +40,7 @@
           align-items: flex-start;
           gap: 0.2rem;
         }
+      }
       }
     }
   }

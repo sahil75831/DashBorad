@@ -2,6 +2,7 @@ import React , { useContext } from "react";
 import { ThemeContext } from "../../Theme";
 import { darkColor, lightColor } from "../../Constants";
 import css from "../../styles/IndividulaList.module.scss";
+
 const IndividualList = ({id, name, age, phoneNumber, email}) => {
     const { themeColor, setThemeColor } = useContext(ThemeContext);
   return (
@@ -20,6 +21,7 @@ const IndividualList = ({id, name, age, phoneNumber, email}) => {
         <span>{phoneNumber}</span>
         <span>{email}</span>
         </div>
+        
         
       </div>
     </div>

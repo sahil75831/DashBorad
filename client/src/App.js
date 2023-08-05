@@ -1,4 +1,5 @@
-import React from "react";
+import React , { useContext } from "react";
+import { ThemeContext } from "../src/DashBoardFront/Theme";
 import ThemeContextProvider from "../src/DashBoardFront/Theme";
 import Appp from "./DashBoardFront/Appp";
 import SideBar from "./DashBoardFront/components/SideBar";
@@ -10,8 +11,12 @@ import NavBar from "./DashBoardFront/components/NavBar";
 import css from "./App.module.scss";
 import TeamList from "./DashBoardFront/components/ManageTeam/TeamList";
 const App = () => {
+  const { themeColor, setThemeColor,displayComp, setDisplayComp } = useContext(ThemeContext)
+  {console.log("disp222222layComp ---",displayComp) } 
+  console.log("sjnjsnsjjsnjsnsn")
   return (
-    <ThemeContextProvider>
+    // <ThemeContextProvider>
+    <>
       <div className={`${css.wrapper}`}>
         <div
           className={`${css.container}`}
@@ -31,7 +36,20 @@ const App = () => {
                 <NavBar primaryText={"DASHBOARD"} secondaryText={"Welcome To Your Dashboard"}/>
               </div>
 
-              {/* <Charts/> */}
+              {/* change components here */}
+              <div className={`${css.out}`} style={{border:"2px solid yellow"}}>
+
+             <div style={{display:displayComp==="BAR"?true:"none", transition:"all 5s"}}>HELLO
+             {console.log(displayComp) }
+             {displayComp==="BAR"?"yes":"no"}
+             <ChartCard
+                  type={"Bar"}
+                  width={"480px"}
+                  height={"300px"}
+                  primaryText={"Revenue Generated"}
+                  secondaryText={"$32,152.00"}
+                />
+             </div>
               <div className={`${css.divTwoContainerCards}`}>
                 <CardInfo cardOne={{ textOne: 12361, textTwo: "email sent" }} />
                 <CardInfo cardOne={{ textOne: 12361, textTwo: "email sent" }} />
@@ -56,23 +74,16 @@ const App = () => {
                   secondaryText={"$32,152.00"}
                 />
               </div>
-              <div className={`${css.divTwoContainerCharts}`}>
-              <ChartCard
-                  type={"Pie"}
-                  width={"380px"}
-                  height={"200px"}
-                  primaryText={"Revenue Generated"}
-                  secondaryText={"$32,152.00"}
-                />
-              
               </div>
+              <div className={`${css.divTwoContainerCharts}`}> </div>
             </div>
           </div>
         </div>
       </div>
 
       <TeamList />
-    </ThemeContextProvider>
+      </>
+    // </ThemeContextProvider>
   );
 };
 

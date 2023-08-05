@@ -1,10 +1,25 @@
-.wrapper{
-    .container{
-        width: 100%;
-        .listCheckBox{
-            display: flex;
-            flex-direction: column;
-            // background-color: aqua;
-        }
+.wrapper {
+    width: fit-content;
+    border: 2px solid gray;
+    overflow: hidden;
+  .container {
+    // width: 100%;
+    .wrapperOut{
+        .wrapperIn{
+            >div{
+                display: flex;
+                flex-direction: row;
+            }
+            .wrapperInOut{
+
+            }
+            .wrapperInIn{
+
+            }
+            .wrapperCheck{}
+            .wrapperCheckLabel{}
+        } 
     }
+    
+  }
 }
