@@ -49,7 +49,7 @@ const ChartCard = ({type, width, height, primaryText,secondaryText}) => {
         <span>{secondaryText}</span>
       </div>
 
-      <div className={`${css.containerBody}`} >
+      <div className={`${css.containerBody}`}  style={{width, height}}>
       {(type==="Line") ? <Line data={data} style={{width, height}}/> :""}
       {(type==="Bar") ? <Bar data={data} style={{width, height}}/> :""}
       {(type==="Doughnut") ? <Doughnut data={data} style={{width, height}}/> :""}

@@ -1,5 +1,5 @@
 .wrapper{
-    width: max-content;
+    // width: max-content;
     overflow: hidden;
     background-color: rebeccapurple;
     border-radius: 5px 5px 0px 0px;
@@ -51,8 +51,7 @@
                 resize: vertical;
             }
             .button{
-                // background-color: teal;
-                background-color: palegreen;
+                background-color: goldenrod;
                 // height: 2rem;
                 width: 100%;
                 border: none;
@@ -61,7 +60,7 @@
                 letter-spacing: 3px;
                 padding: 1rem;
                 &:hover{
-                    background-color: dodgerblue;
+                    background-color: greenyellow;
                     transition: all 0.5s;
                     cursor: pointer;
                     background-color: rgba(219, 192, 192, 0.5);
@@ -70,3 +69,4 @@
         }
     }
 }
+

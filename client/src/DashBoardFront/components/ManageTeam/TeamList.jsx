@@ -48,14 +48,6 @@ const TeamList = () => {
     >
       <div className={`${css.container}`}>
         <div style={{ display: "flex", flexDirection: "row" }}>
-          {/* <span
-            style={{
-              width: "1rem",
-              height: "1rem",
-              content: "none",
-              background: ``,
-            }}
-          ></span> */}
           <NavBar
             primaryText={"TEAM"}
             secondaryText={"Managing The Team Members"}
@@ -63,7 +55,7 @@ const TeamList = () => {
         </div>
         <div className={`${css.wrapperOut}`}>
           <div className={`${css.wrapperIn}`}>
-            <div style={{boxShadow:"2px 2px 12px black"}}>
+            <div style={{ boxShadow: "2px 2px 12px black" }}>
               <input
                 className={`${css.wrapperInOut}`}
                 type="checkbox"
@@ -78,6 +70,18 @@ const TeamList = () => {
                   phoneNumber={"Phone No."}
                   age={"age"}
                   email={"email"}
+                  mainText={
+                    <p
+                      style={{
+                        letterSpacing: "1px",
+                        fontWeight: "700",
+                        paddingLeft: "0.1rem",
+                        paddingRight: "0.1rem",
+                      }}
+                    >
+                      View Profile
+                    </p>
+                  }
                 />
               </label>
             </div>
@@ -86,7 +90,7 @@ const TeamList = () => {
               return (
                 <>
                   <br />
-                  <div style={{boxShadow:"2px 2px 12px black"}}>
+                  <div style={{ boxShadow: "2px 2px 12px black" }}>
                     <input
                       type="checkbox"
                       name={user.name}
@@ -104,6 +108,18 @@ const TeamList = () => {
                         phoneNumber={"+91-776353538"}
                         age={23}
                         email={"sahil@gmail.com"}
+                        mainText={
+                          <p
+                            style={{
+                              letterSpacing: "4px",
+                              fontWeight: "500",
+                              paddingLeft: "1rem",
+                              paddingRight: "1rem",
+                            }}
+                          >
+                            ADMIN
+                          </p>
+                        }
                       />
                     </label>
                   </div>

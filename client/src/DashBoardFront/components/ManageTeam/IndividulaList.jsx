@@ -3,7 +3,7 @@ import { ThemeContext } from "../../Theme";
 import { darkColor, lightColor } from "../../Constants";
 import css from "../../styles/IndividulaList.module.scss";
 
-const IndividualList = ({id, name, age, phoneNumber, email}) => {
+const IndividualList = ({id, name, age, phoneNumber, email, mainText}) => {
     const { themeColor, setThemeColor } = useContext(ThemeContext);
   return (
     <div className={`${css.wrapper}`}
@@ -19,7 +19,7 @@ const IndividualList = ({id, name, age, phoneNumber, email}) => {
         <span>{name}</span>
         <span>{age}</span>
         <span>{phoneNumber}</span>
-        <span>{email}</span>
+        <span><button style={{padding:"0.5rem", backgroundColor:"palegreen", border:"none", cursor:"pointer",borderRadius:"5px", fontSize:"1.3rem" }}>{mainText}</button></span>
         </div>
         
         

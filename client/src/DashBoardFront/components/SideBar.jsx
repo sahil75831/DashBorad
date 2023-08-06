@@ -14,10 +14,22 @@ import css from "../styles/SideBar.module.scss";
 import { darkColor, lightColor } from "../Constants";
 import Charts from "./Charts";
 import ChartCard from "./ChartCard";
+
 const SideBar = () => {
-  const { themeColor, setThemeColor, displayComp, setDisplayComp } = useContext(ThemeContext);
+  const { themeColor, setThemeColor, displayComp, setDisplayComp } =
+    useContext(ThemeContext);
   // const {} = useContext(ThemeContext)
-    console.log("dispaly compsidebar ",displayComp )
+  console.log("dispaly compsidebar ", displayComp);
+  
+  const handleManageTeam = ()=>{
+    setDisplayComp("MANAGETEAM")  
+  }
+  const handleReminder = ()=>{
+    setDisplayComp("HANDLEREMINDER")  
+  }
+  const handleFaq = ()=>{
+    setDisplayComp("HANDLEFAQ")  
+  }
 
   return (
     <div
@@ -40,14 +52,23 @@ const SideBar = () => {
           <div>Sahil</div>
           <div>03-08-2023</div>
         </div>
-        <div style={{fontSize:"0.9rem",letterSpacing:"3px",fontWeight:"600" ,color: `${themeColor === "light" ? "darkslateblue" : "orange"}`}}>DATA</div>
+        <div
+          style={{
+            fontSize: "0.9rem",
+            letterSpacing: "3px",
+            fontWeight: "600",
+            color: `${themeColor === "light" ? "darkslateblue" : "orange"}`,
+          }}
+        >
+          DATA
+        </div>
         <div className={`${css.third}`}>
           <div>
             <AiOutlineHome />
           </div>
           <div>Dashboard</div>
         </div>
-        <div className={`${css.third}`}>
+        <div className={`${css.third}`} onClick={handleManageTeam}>
           <div>
             <AiOutlineTeam />
           </div>
@@ -71,41 +92,75 @@ const SideBar = () => {
           </div>
           <div>Profile</div>
         </div>
-        <div style={{fontSize:"0.9rem",letterSpacing:"3px",fontWeight:"600" ,color: `${themeColor === "light" ? "darkslateblue" : "orange"}`,}}>PAGES</div>
-       
-        <div className={`${css.third}`}>
+        <div
+          style={{
+            fontSize: "0.9rem",
+            letterSpacing: "3px",
+            fontWeight: "600",
+            color: `${themeColor === "light" ? "darkslateblue" : "orange"}`,
+          }}
+        >
+          PAGES
+        </div>
+
+        <div className={`${css.third}`} onClick={handleReminder}>
           <div>
             <AiFillContacts />
           </div>
-          <div>Calender</div>
+          <div>Reminders</div>
         </div>
-        <div className={`${css.third}`}>
+        <div className={`${css.third}`} onClick={handleFaq}>
           <div>
             <AiFillContacts />
           </div>
           <div>FAQs Page</div>
         </div>
-        <div style={{fontSize:"0.9rem",letterSpacing:"3px",fontWeight:"600" ,color: `${themeColor === "light" ? "darkslateblue" : "orange"}`,}}>CHARTS</div>
-        
-        <div className={`${css.third}`} onClick={()=>setDisplayComp("BAR")} style={{cursor:"pointer"}}>
+        <div
+          style={{
+            fontSize: "0.9rem",
+            letterSpacing: "3px",
+            fontWeight: "600",
+            color: `${themeColor === "light" ? "darkslateblue" : "orange"}`,
+          }}
+        >
+          CHARTS
+        </div>
+
+        <div
+          className={`${css.third}`}
+          onClick={() => setDisplayComp("BAR")}
+          style={{ cursor: "pointer" }}
+        >
           <div>
             <BsFillBarChartFill />
           </div>
           <div>Bar</div>
         </div>
-        <div className={`${css.third}`} onClick={()=>setDisplayComp("PIE")} style={{cursor:"pointer"}}>
+        <div
+          className={`${css.third}`}
+          onClick={() => setDisplayComp("PIE")}
+          style={{ cursor: "pointer" }}
+        >
           <div>
             <AiFillPieChart />
           </div>
           <div>pie</div>
         </div>
-        <div className={`${css.third}`} onClick={()=>setDisplayComp("LINE")} style={{cursor:"pointer"}}>
+        <div
+          className={`${css.third}`}
+          onClick={() => setDisplayComp("LINE")}
+          style={{ cursor: "pointer" }}
+        >
           <div>
             <AiOutlineLineChart />
           </div>
           <div>line</div>
         </div>
-        <div className={`${css.third}`} onClick={()=>setDisplayComp("WORLD")} style={{cursor:"pointer"}}>
+        <div
+          className={`${css.third}`}
+          onClick={() => setDisplayComp("WORLD")}
+          style={{ cursor: "pointer" }}
+        >
           <div>
             <GiWorld />
           </div>
